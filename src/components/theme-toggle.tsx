@@ -16,7 +16,7 @@ export function ThemeToggle() {
   const toggleTheme = () => {
     const newIsDark = !isDark;
     setIsDark(newIsDark);
-    
+
     if (newIsDark) {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
@@ -29,8 +29,10 @@ export function ThemeToggle() {
   useEffect(() => {
     // Load theme from localStorage on mount
     const savedTheme = localStorage.getItem("theme");
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
+
     if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
       setIsDark(true);
       document.documentElement.classList.add("dark");
@@ -44,12 +46,8 @@ export function ThemeToggle() {
       onClick={toggleTheme}
       className="h-9 w-9 px-0"
     >
-      {isDark ? (
-        <Sun className="h-4 w-4" />
-      ) : (
-        <Moon className="h-4 w-4" />
-      )}
+      {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
       <span className="sr-only">Toggle theme</span>
     </Button>
   );
-} 
+}

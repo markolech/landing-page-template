@@ -36,7 +36,7 @@ export default function LandingPage() {
           <Zap className="text-primary h-6 w-6" />
           <span className="ml-2 text-lg font-bold">MicroFlow</span>
         </div>
-        <nav className="absolute left-1/2 -translate-x-1/2 flex gap-4 sm:gap-6">
+        <nav className="absolute left-1/2 flex -translate-x-1/2 gap-4 sm:gap-6">
           <a
             className="hover:text-primary text-sm font-medium transition-colors"
             href="#features"
@@ -100,7 +100,7 @@ export default function LandingPage() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="h-12 border-blue-200 px-8 text-blue-700 hover:bg-blue-50"
+                  className="h-12 border-blue-300 px-8 text-blue-800 hover:bg-blue-50 dark:border-blue-600 dark:text-blue-300 dark:hover:bg-blue-950/50"
                 >
                   Watch Demo
                 </Button>
@@ -408,10 +408,10 @@ export default function LandingPage() {
                     What happens if I exceed my automation limit?
                   </AccordionTrigger>
                   <AccordionContent>
-                    We&apos;ll notify you when you&apos;re approaching your limit. You can
-                    either upgrade your plan or pause some automations. We never
-                    stop your automations without warning - your business
-                    operations stay protected.
+                    We&apos;ll notify you when you&apos;re approaching your
+                    limit. You can either upgrade your plan or pause some
+                    automations. We never stop your automations without warning
+                    - your business operations stay protected.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -456,8 +456,8 @@ export default function LandingPage() {
                     ))}
                   </div>
                   <CardDescription>
-                    &quot;MicroFlow saved me 10 hours per week. I can finally focus
-                    on growing my business instead of manual tasks.&quot;
+                    &quot;MicroFlow saved me 10 hours per week. I can finally
+                    focus on growing my business instead of manual tasks.&quot;
                   </CardDescription>
                 </CardHeader>
                 <CardFooter>
@@ -483,8 +483,8 @@ export default function LandingPage() {
                     ))}
                   </div>
                   <CardDescription>
-                    &quot;The setup was incredibly easy. Within 30 minutes, I had my
-                    first automation running perfectly.&quot;
+                    &quot;The setup was incredibly easy. Within 30 minutes, I
+                    had my first automation running perfectly.&quot;
                   </CardDescription>
                 </CardHeader>
                 <CardFooter>
