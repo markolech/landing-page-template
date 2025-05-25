@@ -49,6 +49,7 @@ npx shadcn@latest add [component-name]
 The following components are already installed:
 
 **Form Components:**
+
 - `Button` - Various button styles and variants
 - `Input` - Form input fields
 - `Label` - Form labels
@@ -58,6 +59,7 @@ The following components are already installed:
 - `Textarea` - Multi-line text input
 
 **Layout & Navigation:**
+
 - `Card` - Container component with header, content sections
 - `Tabs` - Tabbed interface component
 - `Accordion` - Collapsible content sections
@@ -66,6 +68,7 @@ The following components are already installed:
 - `Dropdown Menu` - Context menu component
 
 **Feedback & Display:**
+
 - `Alert` - Alert messages and notifications
 - `Badge` - Small status indicators
 - `Avatar` - User profile pictures
@@ -116,6 +119,7 @@ npm run check-all    # Run all checks (type, lint, format)
 - **TypeScript** - Full type safety and IntelliSense
 
 The setup includes:
+
 - Prettier configuration with Tailwind CSS plugin
 - ESLint integration with Prettier
 - Pre-configured ignore files
