@@ -30,44 +30,55 @@ import { ThemeToggle } from "@/components/theme-toggle";
 export default function LandingPage() {
   return (
     <div className="flex min-h-screen flex-col">
+      {/* Skip Navigation Link */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:rounded focus:bg-blue-600 focus:px-4 focus:py-2 focus:text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+        Skip to main content
+      </a>
+
       {/* Header */}
-      <header className="flex h-14 items-center border-b px-4 lg:px-6">
+      <header className="flex h-14 items-center border-b px-4 lg:px-6" role="banner">
         <div className="flex items-center">
-          <Zap className="text-primary h-6 w-6" />
+          <Zap className="text-primary h-6 w-6" aria-hidden="true" />
           <span className="ml-2 text-lg font-bold">MicroFlow</span>
         </div>
-        <nav className="absolute left-1/2 flex -translate-x-1/2 gap-4 sm:gap-6">
+        <nav className="absolute left-1/2 flex -translate-x-1/2 gap-4 sm:gap-6" role="navigation" aria-label="Main navigation">
           <a
             className="hover:text-primary text-sm font-medium transition-colors"
             href="#features"
+            aria-label="Go to Features section"
           >
             Features
           </a>
           <a
             className="hover:text-primary text-sm font-medium transition-colors"
             href="#pricing"
+            aria-label="Go to Pricing section"
           >
             Pricing
           </a>
           <a
             className="hover:text-primary text-sm font-medium transition-colors"
             href="#testimonials"
+            aria-label="Go to Reviews section"
           >
             Reviews
           </a>
         </nav>
         <div className="ml-auto flex items-center gap-2">
           <ThemeToggle />
-          <Button variant="outline" size="sm">
+          <Button variant="outline" size="sm" aria-label="Sign in to your account">
             Sign In
           </Button>
-          <Button size="sm">Get Started</Button>
+          <Button size="sm" aria-label="Get started with free trial">Get Started</Button>
         </div>
       </header>
 
-      <main className="flex-1">
+      <main className="flex-1" id="main-content" role="main">
         {/* Hero Section */}
-        <section className="w-full bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-12 md:py-24 lg:py-32 xl:py-48 dark:from-blue-950/20 dark:via-indigo-950/20 dark:to-purple-950/20">
+        <section className="w-full bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 py-12 md:py-24 lg:py-32 xl:py-48 dark:from-blue-950/20 dark:via-indigo-950/20 dark:to-purple-950/20" aria-labelledby="hero-heading">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
@@ -77,7 +88,7 @@ export default function LandingPage() {
                 >
                   🚀 Now in Beta - 50% Off
                 </Badge>
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+                <h1 id="hero-heading" className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
                   Automate Your Workflow
                   <br />
                   <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
@@ -93,14 +104,16 @@ export default function LandingPage() {
                 <Button
                   size="lg"
                   className="h-12 bg-gradient-to-r from-blue-600 to-purple-600 px-8 hover:from-blue-700 hover:to-purple-700"
+                  aria-label="Start your 14-day free trial"
                 >
                   Start Free Trial
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                 </Button>
                 <Button
                   variant="outline"
                   size="lg"
                   className="h-12 border-blue-300 px-8 text-blue-800 hover:bg-blue-50 dark:border-blue-600 dark:text-blue-300 dark:hover:bg-blue-950/50"
+                  aria-label="Watch product demonstration video"
                 >
                   Watch Demo
                 </Button>
@@ -116,11 +129,12 @@ export default function LandingPage() {
         <section
           id="features"
           className="bg-muted/50 w-full py-12 md:py-24 lg:py-32"
+          aria-labelledby="features-heading"
         >
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                <h2 id="features-heading" className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Everything You Need to Automate
                 </h2>
                 <p className="text-muted-foreground max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -132,8 +146,8 @@ export default function LandingPage() {
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-3">
               <Card className="border-0 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-950/50 dark:to-indigo-950/50">
                 <CardHeader>
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-blue-600">
-                    <Zap className="h-6 w-6 text-white" />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-blue-600" aria-hidden="true">
+                    <Zap className="h-6 w-6 text-white" aria-hidden="true" />
                   </div>
                   <CardTitle>Lightning Fast Setup</CardTitle>
                   <CardDescription>
@@ -144,8 +158,8 @@ export default function LandingPage() {
               </Card>
               <Card className="border-0 bg-gradient-to-br from-emerald-50 to-teal-100 dark:from-emerald-950/50 dark:to-teal-950/50">
                 <CardHeader>
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600">
-                    <Shield className="h-6 w-6 text-white" />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600" aria-hidden="true">
+                    <Shield className="h-6 w-6 text-white" aria-hidden="true" />
                   </div>
                   <CardTitle>Enterprise Security</CardTitle>
                   <CardDescription>
@@ -156,8 +170,8 @@ export default function LandingPage() {
               </Card>
               <Card className="border-0 bg-gradient-to-br from-purple-50 to-pink-100 dark:from-purple-950/50 dark:to-pink-950/50">
                 <CardHeader>
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-purple-500 to-pink-600">
-                    <BarChart3 className="h-6 w-6 text-white" />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-purple-500 to-pink-600" aria-hidden="true">
+                    <BarChart3 className="h-6 w-6 text-white" aria-hidden="true" />
                   </div>
                   <CardTitle>Real-time Analytics</CardTitle>
                   <CardDescription>
@@ -171,11 +185,11 @@ export default function LandingPage() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="w-full py-12 md:py-24 lg:py-32">
+        <section id="pricing" className="w-full py-12 md:py-24 lg:py-32" aria-labelledby="pricing-heading">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+                <h2 id="pricing-heading" className="text-3xl font-bold tracking-tighter sm:text-5xl">
                   Simple, Transparent Pricing
                 </h2>
                 <p className="text-muted-foreground max-w-[900px] md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
@@ -202,19 +216,19 @@ export default function LandingPage() {
                 <CardContent className="space-y-4">
                   <div className="space-y-2">
                     <div className="flex items-center">
-                      <Check className="text-primary mr-2 h-4 w-4" />
+                      <Check className="text-green-600 dark:text-green-400 mr-2 h-4 w-4" aria-hidden="true" />
                       <span className="text-sm">Up to 100 automations</span>
                     </div>
                     <div className="flex items-center">
-                      <Check className="text-primary mr-2 h-4 w-4" />
+                      <Check className="text-green-600 dark:text-green-400 mr-2 h-4 w-4" aria-hidden="true" />
                       <span className="text-sm">5 integrations</span>
                     </div>
                     <div className="flex items-center">
-                      <Check className="text-primary mr-2 h-4 w-4" />
+                      <Check className="text-green-600 dark:text-green-400 mr-2 h-4 w-4" aria-hidden="true" />
                       <span className="text-sm">Email support</span>
                     </div>
                     <div className="flex items-center">
-                      <Check className="text-primary mr-2 h-4 w-4" />
+                      <Check className="text-green-600 dark:text-green-400 mr-2 h-4 w-4" aria-hidden="true" />
                       <span className="text-sm">Basic analytics</span>
                     </div>
                   </div>
@@ -301,23 +315,23 @@ export default function LandingPage() {
                 <CardContent className="space-y-4">
                   <div className="space-y-2">
                     <div className="flex items-center">
-                      <Check className="text-primary mr-2 h-4 w-4" />
+                      <Check className="text-green-600 dark:text-green-400 mr-2 h-4 w-4" aria-hidden="true" />
                       <span className="text-sm">Everything in Pro</span>
                     </div>
                     <div className="flex items-center">
-                      <Check className="text-primary mr-2 h-4 w-4" />
+                      <Check className="text-green-600 dark:text-green-400 mr-2 h-4 w-4" aria-hidden="true" />
                       <span className="text-sm">Dedicated support</span>
                     </div>
                     <div className="flex items-center">
-                      <Check className="text-primary mr-2 h-4 w-4" />
+                      <Check className="text-green-600 dark:text-green-400 mr-2 h-4 w-4" aria-hidden="true" />
                       <span className="text-sm">Custom integrations</span>
                     </div>
                     <div className="flex items-center">
-                      <Check className="text-primary mr-2 h-4 w-4" />
+                      <Check className="text-green-600 dark:text-green-400 mr-2 h-4 w-4" aria-hidden="true" />
                       <span className="text-sm">SLA guarantee</span>
                     </div>
                     <div className="flex items-center">
-                      <Check className="text-primary mr-2 h-4 w-4" />
+                      <Check className="text-green-600 dark:text-green-400 mr-2 h-4 w-4" aria-hidden="true" />
                       <span className="text-sm">On-premise deployment</span>
                     </div>
                   </div>

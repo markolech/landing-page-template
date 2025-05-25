@@ -1,0 +1,11 @@
+{
+  "extends": ["next/core-web-vitals", "prettier"],
+  "overrides": [
+    {
+      "files": ["**/__tests__/**/*.js", "**/*.test.js", "**/*.spec.js"],
+      "rules": {
+        "@typescript-eslint/no-require-imports": "off"
+      }
+    }
+  ]
+} 

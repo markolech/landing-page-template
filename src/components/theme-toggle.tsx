@@ -45,9 +45,17 @@ export function ThemeToggle() {
       size="sm"
       onClick={toggleTheme}
       className="h-9 w-9 px-0"
+      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      title={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
-      {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-      <span className="sr-only">Toggle theme</span>
+      {isDark ? (
+        <Sun className="h-4 w-4" aria-hidden="true" />
+      ) : (
+        <Moon className="h-4 w-4" aria-hidden="true" />
+      )}
+      <span className="sr-only">
+        {isDark ? "Switch to light mode" : "Switch to dark mode"}
+      </span>
     </Button>
   );
 }
