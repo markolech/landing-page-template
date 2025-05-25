@@ -25,6 +25,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export default function LandingPage() {
   return (
@@ -55,7 +56,8 @@ export default function LandingPage() {
             Reviews
           </a>
         </nav>
-        <div className="ml-auto flex gap-2">
+        <div className="ml-auto flex items-center gap-2">
+          <ThemeToggle />
           <Button variant="outline" size="sm">
             Sign In
           </Button>
