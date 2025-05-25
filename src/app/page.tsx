@@ -31,11 +31,11 @@ export default function LandingPage() {
     <div className="flex min-h-screen flex-col">
       {/* Header */}
       <header className="flex h-14 items-center border-b px-4 lg:px-6">
-        <div className="flex items-center justify-center">
+        <div className="flex items-center">
           <Zap className="text-primary h-6 w-6" />
           <span className="ml-2 text-lg font-bold">MicroFlow</span>
         </div>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
+        <nav className="absolute left-1/2 -translate-x-1/2 flex gap-4 sm:gap-6">
           <a
             className="hover:text-primary text-sm font-medium transition-colors"
             href="#features"
@@ -55,8 +55,8 @@ export default function LandingPage() {
             Reviews
           </a>
         </nav>
-        <div className="ml-4 flex gap-2">
-          <Button variant="ghost" size="sm">
+        <div className="ml-auto flex gap-2">
+          <Button variant="outline" size="sm">
             Sign In
           </Button>
           <Button size="sm">Get Started</Button>
