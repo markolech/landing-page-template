@@ -1,8 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Landing Page Template
+
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app) and enhanced with [ShadCN UI](https://ui.shadcn.com/) components.
+
+## Features
+
+- ⚡ **Next.js 15** with App Router
+- 🎨 **ShadCN UI** - Beautiful, accessible components
+- 🎯 **Tailwind CSS v4** - Latest version with modern features
+- 🌙 **Dark/Light Mode** - Built-in theme support
+- 📱 **Responsive Design** - Mobile-first approach
+- 🔧 **TypeScript** - Full type safety
+- 🎭 **Lucide Icons** - Beautiful icon library
 
 ## Getting Started
 
-First, run the development server:
+First, install dependencies:
+
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -18,16 +36,97 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ShadCN UI Components
+
+This template comes with ShadCN UI pre-configured. You can add more components using:
+
+```bash
+npx shadcn@latest add [component-name]
+```
+
+### Available Components
+
+The following components are already installed:
+- `Button` - Various button styles and variants
+- `Card` - Container component with header, content sections
+- `Input` - Form input fields
+- `Label` - Form labels
+
+### Adding New Components
+
+To add more components, visit the [ShadCN UI documentation](https://ui.shadcn.com/docs/components) and use the CLI:
+
+```bash
+# Example: Add a dialog component
+npx shadcn@latest add dialog
+
+# Example: Add multiple components
+npx shadcn@latest add dropdown-menu sheet tabs
+```
+
+## Customization
+
+### Theme Customization
+
+The theme can be customized in `src/app/globals.css`. ShadCN uses CSS variables for theming:
+
+```css
+:root {
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  /* ... more variables */
+}
+```
+
+### Component Configuration
+
+ShadCN configuration is stored in `components.json`:
+
+```json
+{
+  "style": "new-york",
+  "rsc": true,
+  "tsx": true,
+  "tailwind": {
+    "config": "",
+    "css": "src/app/globals.css",
+    "baseColor": "neutral",
+    "cssVariables": true
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils"
+  }
+}
+```
+
+## Project Structure
+
+```
+src/
+├── app/
+│   ├── globals.css      # Global styles and ShadCN variables
+│   ├── layout.tsx       # Root layout
+│   └── page.tsx         # Home page with ShadCN demo
+├── components/
+│   └── ui/              # ShadCN UI components
+│       ├── button.tsx
+│       ├── card.tsx
+│       ├── input.tsx
+│       └── label.tsx
+└── lib/
+    └── utils.ts         # Utility functions (cn helper)
+```
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about the technologies used in this template:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API
+- [ShadCN UI Documentation](https://ui.shadcn.com/docs) - learn about ShadCN components
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs) - learn about Tailwind CSS
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial
 
 ## Deploy on Vercel
 
