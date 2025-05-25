@@ -47,10 +47,34 @@ npx shadcn@latest add [component-name]
 ### Available Components
 
 The following components are already installed:
+
+**Form Components:**
 - `Button` - Various button styles and variants
-- `Card` - Container component with header, content sections
 - `Input` - Form input fields
 - `Label` - Form labels
+- `Form` - Form wrapper with validation support
+- `Select` - Dropdown select component
+- `Checkbox` - Checkbox input
+- `Textarea` - Multi-line text input
+
+**Layout & Navigation:**
+- `Card` - Container component with header, content sections
+- `Tabs` - Tabbed interface component
+- `Accordion` - Collapsible content sections
+- `Sheet` - Slide-out panel component
+- `Dialog` - Modal dialog component
+- `Dropdown Menu` - Context menu component
+
+**Feedback & Display:**
+- `Alert` - Alert messages and notifications
+- `Badge` - Small status indicators
+- `Avatar` - User profile pictures
+- `Progress` - Progress bars
+- `Skeleton` - Loading placeholders
+- `Sonner` - Toast notifications (modern toast replacement)
+- `Tooltip` - Hover information
+- `Table` - Data tables
+- `Separator` - Visual dividers
 
 ### Adding New Components
 
@@ -63,6 +87,39 @@ npx shadcn@latest add dialog
 # Example: Add multiple components
 npx shadcn@latest add dropdown-menu sheet tabs
 ```
+
+## Development Tools
+
+This template includes a complete development setup with code formatting, linting, and type checking:
+
+### Available Scripts
+
+```bash
+# Development
+npm run dev          # Start development server with Turbopack
+npm run build        # Build for production
+npm run start        # Start production server
+
+# Code Quality
+npm run lint         # Run ESLint
+npm run lint:fix     # Run ESLint with auto-fix
+npm run format       # Format code with Prettier
+npm run format:check # Check if code is formatted
+npm run type-check   # Run TypeScript type checking
+npm run check-all    # Run all checks (type, lint, format)
+```
+
+### Code Formatting & Linting
+
+- **Prettier** - Automatic code formatting with Tailwind CSS class sorting
+- **ESLint** - Code linting with Next.js and TypeScript rules
+- **TypeScript** - Full type safety and IntelliSense
+
+The setup includes:
+- Prettier configuration with Tailwind CSS plugin
+- ESLint integration with Prettier
+- Pre-configured ignore files
+- Comprehensive scripts for development workflow
 
 ## Customization
 
