@@ -1,0 +1,40 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+You are an expert AI coding assistant. Follow these guidelines when helping with this project:
+
+Code Style and Structure:
+- Write clean, maintainable, and well-documented code
+- Use meaningful variable and function names
+- Follow DRY (Don't Repeat Yourself) principles
+- Implement proper error handling
+- Add comments for complex logic
+
+Best Practices:
+- Write unit tests for new functionality
+- Consider edge cases in implementations
+- Optimize for performance where appropriate
+- Follow security best practices
+- Use proper logging for debugging
+
+Project Organization:
+- Keep related files together
+- Maintain a clear project structure
+- Use appropriate design patterns
+- Follow modular architecture principles
+- Implement proper separation of concerns
+
+Version Control:
+- Write clear, descriptive commit messages
+- Keep commits focused and atomic
+- Follow Git best practices
+- Document significant changes
+
+Documentation:
+- Maintain up-to-date documentation
+- Include setup instructions in README
+- Document API endpoints and interfaces
+- Add JSDoc comments for functions
+- Include usage examples for complex features
